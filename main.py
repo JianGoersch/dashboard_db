@@ -31,7 +31,7 @@ def set_sidebar(
     dataframe: pd.DataFrame = None, 
     filtered: pd.DataFrame = None) -> dict:
     
-    st.sidebar.image("img\db1.png")
+    st.sidebar.image("img/db1.png")
     st.sidebar.title("Selecione o Filtro: ")
     if filtered is None:
         df = dataframe
@@ -188,7 +188,7 @@ def build_visualizations(dataframe: pd.DataFrame):
     st.divider()
     col4,col5,x3,x4,x5,x6,x7,x8 = st.columns(8)
     with x8:
-        st.image("img\db3.png",width=200)
+        st.image("img/db3.png",width=200)
     #st.dataframe(dataframe.head(20))
 
 def main(dataframe):
