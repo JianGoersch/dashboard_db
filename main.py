@@ -98,7 +98,7 @@ def build_visualizations(dataframe: pd.DataFrame):
     
 
     st.info("Indicadores Gerais :bar_chart:")
-    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'de_DE.UTF-8')
     col1,col2,col3,col4,col5 = st.columns(5)
     
     col1.metric(
