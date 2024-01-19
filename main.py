@@ -87,7 +87,7 @@ def build_visualizations(dataframe: pd.DataFrame):
     total_quant_ton = dataframe["Quant. (TN)"].sum()
     dif_quant_ton = round((total_quant_ton * 100) / 5319.7,2)
     custo_total = (
-        float(round(dataframe["Custo (R$)"].sum()),2)
+        float(round(dataframe["Custo (R$)"].sum()))
     )
     dif_custo_total = round((custo_total * 100) / 492795,2)
     ton_hs =  total_hs_prod / total_quant_ton
