@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import locale
+# import locale
 from streamlit_extras.metric_cards import style_metric_cards
 import plotly as pl
 import plotly.express as px
@@ -87,7 +87,7 @@ def build_visualizations(dataframe: pd.DataFrame):
     total_quant_ton = dataframe["Quant. (TN)"].sum()
     dif_quant_ton = round((total_quant_ton * 100) / 5319.7,2)
     custo_total = (
-        float(round(dataframe["Custo (R$)"].sum()))
+        float(round(dataframe["Custo (R$)"].sum()),2)
     )
     dif_custo_total = round((custo_total * 100) / 492795,2)
     ton_hs =  total_hs_prod / total_quant_ton
@@ -98,7 +98,7 @@ def build_visualizations(dataframe: pd.DataFrame):
     
 
     st.info("Indicadores Gerais :bar_chart:")
-    locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
+  #  locale.setlocale(locale.LC_MONETARY, 'pt_BR.UTF-8')
     col1,col2,col3,col4,col5 = st.columns(5)
     
     col1.metric(
@@ -123,7 +123,7 @@ def build_visualizations(dataframe: pd.DataFrame):
                 )
     col5.metric(
         label="Custo Total :moneybag:",
-        value=f"{locale.currency( custo_total, grouping=True)}",
+        value=f"{ custo_total}R$",
         delta=f"{dif_custo_total} % do total",
                 )
     st.divider()
