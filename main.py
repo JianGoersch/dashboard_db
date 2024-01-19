@@ -99,7 +99,7 @@ def build_visualizations(dataframe: pd.DataFrame):
 
     st.info("Indicadores Gerais :bar_chart:")
     col1,col2,col3,col4,col5 = st.columns(5)
-    locale.setlocale(locale.LC_MONETARY, 'en_US.UTF-8')
+    
     col1.metric(
         label="Horas Paradas :clock1:",
         value=total_hs_paradas,
@@ -122,7 +122,7 @@ def build_visualizations(dataframe: pd.DataFrame):
                 )
     col5.metric(
         label="Custo Total :moneybag:",
-        value=f"{locale.currency( custo_total, grouping=True)}",
+        value=f"{custo_total} R$",
         delta=f"{dif_custo_total} % do total",
                 )
     st.divider()
