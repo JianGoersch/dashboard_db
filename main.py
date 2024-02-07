@@ -69,7 +69,7 @@ def set_sidebar(
 #     st.sidebar.image("img\db1.png", use_column_width=True)
 
 #     option = st.radio(
-#     "Produção :chart_with_upwards_trend:",
+#     "Producao :chart_with_upwards_trend:",
 #     ["Total :chart:","Rebritagem :pick:", "Britagem :rock:", "Fertilizantes :mountain:","Cal :construction_worker:","Argamassa :bricks:"],
 
 #     )
